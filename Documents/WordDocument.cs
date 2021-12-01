@@ -50,7 +50,6 @@ namespace ASO.Documents
         }
         public void Dispose()
         {
-            if(_app.ActiveDocument != null) _app.ActiveDocument.Close();
             System.Runtime.InteropServices.Marshal.ReleaseComObject(_app);
         }
     }
