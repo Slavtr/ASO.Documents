@@ -8,6 +8,6 @@ namespace ASO.Documents
 {
     public class WarrantRecord
     {
-
+        public string DeveloperName { get; set; }
     }
 }
