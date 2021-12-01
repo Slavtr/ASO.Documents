@@ -10,7 +10,7 @@ namespace ASO.Documents
     {
         public string DeveloperName { get; private set; }
         public string WhoChecked { get; private set; }
-        public string ContrName { get; private set; }
+        public string NormalInspection { get; private set; }
         public string GIP { get; private set; }
         public string TomeCipher { get; private set; }
         public string DocumentName { get; private set; }
@@ -22,18 +22,18 @@ namespace ASO.Documents
         /// </summary>
         /// <param name="developerName">Разработал</param>
         /// <param name="whoChecked">Проверил</param>
-        /// <param name="contrName">Н. Контр.</param>
+        /// <param name="normalInspection">Нормоконтроллер</param>
         /// <param name="gip">ГИП</param>
         /// <param name="tomeCipher">Шифр тома</param>
         /// <param name="documentName">Наименование документа</param>
         /// <param name="stage">Стадия</param>
         /// <param name="companyName">Название компании</param>
         /// <param name="mainIngenerName">Главный инженер, фамилия и инициалы</param>
-        public WarrantRecord(string developerName, string whoChecked, string contrName, string gip, string tomeCipher, string documentName, string stage, string companyName, string mainIngenerName)
+        public WarrantRecord(string developerName, string whoChecked, string normalInspection, string gip, string tomeCipher, string documentName, string stage, string companyName, string mainIngenerName)
         {
             DeveloperName = developerName;
             WhoChecked = whoChecked;
-            ContrName = contrName;
+            NormalInspection = normalInspection;
             GIP = gip;
             TomeCipher = tomeCipher;
             DocumentName = documentName;
