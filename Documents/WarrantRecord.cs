@@ -22,14 +22,14 @@ namespace ASO.Documents
         /// </summary>
         /// <param name="developerName">Разработал</param>
         /// <param name="whoChecked">Проверил</param>
-        /// <param name="contrName"></param>
-        /// <param name="gip"></param>
-        /// <param name="tomeCipher"></param>
-        /// <param name="documentName"></param>
-        /// <param name="stage"></param>
-        /// <param name="compantName"></param>
-        /// <param name="mainIngenerName"></param>
-        public WarrantRecord(string developerName, string whoChecked, string contrName, string gip, string tomeCipher, string documentName, string stage, string compantName, string mainIngenerName)
+        /// <param name="contrName">Н. Контр.</param>
+        /// <param name="gip">ГИП</param>
+        /// <param name="tomeCipher">Шифр тома</param>
+        /// <param name="documentName">Наименование документа</param>
+        /// <param name="stage">Стадия</param>
+        /// <param name="companyName">Название компании</param>
+        /// <param name="mainIngenerName">Главный инженер, фамилия и инициалы</param>
+        public WarrantRecord(string developerName, string whoChecked, string contrName, string gip, string tomeCipher, string documentName, string stage, string companyName, string mainIngenerName)
         {
             DeveloperName = developerName;
             WhoChecked = whoChecked;
@@ -38,7 +38,7 @@ namespace ASO.Documents
             TomeCipher = tomeCipher;
             DocumentName = documentName;
             Stage = stage;
-            CompanyName = compantName;
+            CompanyName = companyName;
             MainIngenerName = mainIngenerName;
         }
     }
