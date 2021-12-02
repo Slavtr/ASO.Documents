@@ -21,7 +21,7 @@ namespace ASO.Documents
         /// </summary>
         public string NormalInspection { get; private set; }
         /// <summary>
-        /// ГИП
+        /// Главный инженер проекта
         /// </summary>
         public string GIP { get; private set; }
         /// <summary>
@@ -50,7 +50,6 @@ namespace ASO.Documents
         /// <param name="developerName">Разработал</param>
         /// <param name="whoChecked">Проверил</param>
         /// <param name="normalInspection">Нормоконтроллер</param>
-        /// <param name="gip">ГИП</param>
         /// <param name="tomeCipher">Шифр тома</param>
         /// <param name="documentName">Наименование документа</param>
         /// <param name="stage">Стадия</param>
@@ -58,17 +57,17 @@ namespace ASO.Documents
         /// <param name="mainIngenerName">Главный инженер, (руководитель проекта) имя</param>
         /// <param name="mainIngenerName">Главный инженер, (руководитель проекта) фамилия</param>
         /// <param name="mainIngenerName">Главный инженер, (руководитель проекта) отчество</param>
-        public WarrantRecord(string developerName, string whoChecked, string normalInspection, string gip, string tomeCipher, string documentName, string stage, string companyName, string mainIngenerName, string mainIngenerSurname, string mainIngenerPatronymic)
+        public WarrantRecord(string developerName, string whoChecked, string normalInspection, string tomeCipher, string documentName, string stage, string companyName, Entities.Person mainIngener)
         {
             DeveloperName = developerName;
             WhoChecked = whoChecked;
             NormalInspection = normalInspection;
-            GIP = gip;
+            GIP = "\""+mainIngener.Surname+"\"";
             TomeCipher = tomeCipher;
             DocumentName = documentName;
             Stage = stage;
             CompanyName = companyName;
-            MainIngenerName = mainIngenerName[0] + ". " + mainIngenerPatronymic[0] + ". " + mainIngenerName;
+            MainIngenerName = mainIngener.Name[0] + ". " + mainIngener.Patronymic[0] + ". " + mainIngener.Surname;
         }
     }
 }
