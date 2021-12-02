@@ -55,8 +55,10 @@ namespace ASO.Documents
         /// <param name="documentName">Наименование документа</param>
         /// <param name="stage">Стадия</param>
         /// <param name="companyName">Название компании</param>
-        /// <param name="mainIngenerName">Главный инженер, фамилия и инициалы (И.О. Фамилия РП)</param>
-        public WarrantRecord(string developerName, string whoChecked, string normalInspection, string gip, string tomeCipher, string documentName, string stage, string companyName, string mainIngenerName)
+        /// <param name="mainIngenerName">Главный инженер, (руководитель проекта) имя</param>
+        /// <param name="mainIngenerName">Главный инженер, (руководитель проекта) фамилия</param>
+        /// <param name="mainIngenerName">Главный инженер, (руководитель проекта) отчество</param>
+        public WarrantRecord(string developerName, string whoChecked, string normalInspection, string gip, string tomeCipher, string documentName, string stage, string companyName, string mainIngenerName, string mainIngenerSurname, string mainIngenerPatronymic)
         {
             DeveloperName = developerName;
             WhoChecked = whoChecked;
@@ -66,7 +68,7 @@ namespace ASO.Documents
             DocumentName = documentName;
             Stage = stage;
             CompanyName = companyName;
-            MainIngenerName = mainIngenerName;
+            MainIngenerName = mainIngenerName[0] + ". " + mainIngenerPatronymic[0] + ". " + mainIngenerName;
         }
     }
 }
